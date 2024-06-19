@@ -9,7 +9,7 @@ public class DistributeThreadsSolution {
         int initVal = maxInitialBorderVal - absBorderDist;
         
         int initLadderSum = (coreCount - absBorderDist) * 2;
-        int fill = (threadCount - initLadderSum) / 2;
+        int fill = (threadCount - initLadderSum) / n;
 
         int res = initVal + fill;
 
