@@ -1,4 +1,4 @@
-package dev.stan;
+package dev.stan.interview_tasks;
 
 /**
  * Hello world!
