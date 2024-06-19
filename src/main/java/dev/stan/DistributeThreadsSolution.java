@@ -1,6 +1,6 @@
-package dev.stan.interview_tasks.DistributeThreads;
+package dev.stan;
 
-public class DistributeThreads {
+public class DistributeThreadsSolution {
 
     public int solve(int coreCount, int threadCount, int efCorePos) {
         return 0;

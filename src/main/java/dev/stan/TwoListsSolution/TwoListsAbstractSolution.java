@@ -1,11 +1,10 @@
-package dev.stan.interview_tasks.TwoLists;
+package dev.stan.TwoListsSolution;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.IntStream;
 
-public abstract class TwoLists {
+public abstract class TwoListsAbstractSolution {
 
     public abstract Set<Integer> getIndexes(int count, List<Integer> diff);
 
@@ -17,12 +16,17 @@ public abstract class TwoLists {
         return diff;
     }
 
-
     public int solve(int k, List<Integer> list1, List<Integer> list2) {
         List<Integer> diff = getDiff(list1, list2);
         Set<Integer> indexes = getIndexes(k, diff);
 
+        System.out.println("Diff: " + diff);
+        System.out.println("Indexes: " + indexes);
+
         int totalAmount = Math.max(list1.size(), list2.size());
+
+        System.out.println("Total amount: " + totalAmount);
+
         int totalSum = 0;
         for (int i = 0; i < totalAmount; i++) {
             if (indexes.contains(i)) {
