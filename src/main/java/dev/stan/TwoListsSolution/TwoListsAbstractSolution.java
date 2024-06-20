@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import org.junit.platform.commons.logging.Logger;
+import org.junit.platform.commons.logging.LoggerFactory;
+
 public abstract class TwoListsAbstractSolution {
+    static final Logger logger = LoggerFactory.getLogger(TwoListsAbstractSolution.class);
 
     public abstract Set<Integer> getIndexes(int count, List<Integer> diff);
 
@@ -20,12 +24,7 @@ public abstract class TwoListsAbstractSolution {
         List<Integer> diff = getDiff(list1, list2);
         Set<Integer> indexes = getIndexes(k, diff);
 
-        System.out.println("Diff: " + diff);
-        System.out.println("Indexes: " + indexes);
-
         int totalAmount = Math.max(list1.size(), list2.size());
-
-        System.out.println("Total amount: " + totalAmount);
 
         int totalSum = 0;
         for (int i = 0; i < totalAmount; i++) {
@@ -35,6 +34,13 @@ public abstract class TwoListsAbstractSolution {
                 totalSum += list2.get(i);
             }
         }
+
+        String logMsg = String.format("\u001B[36m k: %d, list1: %s, list2: %s,\n" +
+                                      "\u001B[34m diff: %s, indexes: %s, totalAmount: %d,\n" + 
+                                      "\u001B[32m totalSum: %d",
+                                      k, list1, list2,
+                                      diff, indexes, totalAmount, totalSum);
+        logger.info(() -> "\u001B[32m ---TwoListsAbstractSolution.solve--- \n" + logMsg + "\n");
 
         return totalSum;
     }
