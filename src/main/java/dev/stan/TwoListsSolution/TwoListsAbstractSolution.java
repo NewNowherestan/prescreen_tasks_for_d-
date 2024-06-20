@@ -7,6 +7,15 @@ import java.util.Set;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
 
+/*
+ * 
+ * The strategy pattern here is just because I dont remember should the K number be subsiquent or not so I did both.
+ * 
+ * TwoListsWindow is the strategy where the K number should be subsiquent, and done by sliding window approach.
+ * 
+ * TwoListsAny is the strategy where the K numbers can be any and just brutforced via sort.
+ * 
+ */
 public abstract class TwoListsAbstractSolution {
     static final Logger logger = LoggerFactory.getLogger(TwoListsAbstractSolution.class);
 
