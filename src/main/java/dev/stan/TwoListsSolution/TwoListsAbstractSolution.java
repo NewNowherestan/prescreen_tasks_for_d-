@@ -12,9 +12,19 @@ import org.junit.platform.commons.logging.LoggerFactory;
  * The strategy pattern here is just because I dont remember should the K number be subsiquent or not so I did both.
  * 
  * TwoListsWindow is the strategy where the K number should be subsiquent, and done by sliding window approach.
- * 
  * TwoListsAny is the strategy where the K numbers can be any and just brutforced via sort.
  * 
+ * The overall approach is:
+ * 1. Get the difference between the two lists.
+ *      This will remove the need to compare the values from the list1 and list2.
+ *      The difference will be the same for the same indexes. And no need to synchroniusly traverse the lists.
+ * 2. Get the indexes of the K biggest differences.
+ *      Each implementation of the TwoListsAbstractSolution will have its own way of getting the indexes.
+ * 4. Compose the final result by adding the values from the list1 or list2 depending on the index.
+ * 
+ * The overall complexity is O(n) where n is the size of the biggest list. Constants are not taken into account.
+ * 
+ * Really good task, I enjoyed it.
  */
 public abstract class TwoListsAbstractSolution {
     static final Logger logger = LoggerFactory.getLogger(TwoListsAbstractSolution.class);
