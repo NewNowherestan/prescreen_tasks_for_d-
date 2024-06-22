@@ -9,7 +9,7 @@ import org.junit.platform.commons.logging.LoggerFactory;
 
 /*
  * 
- * The strategy pattern here is used to handle different scenarios for the K number. 
+ * The Template method pattern here is used to handle different scenarios for the K number. 
  * - `TwoListsWindow` is the strategy where the K number should be subsequent and is implemented using a sliding window approach.
  * - `TwoListsAny` is the strategy where the K numbers can be any and is implemented by brute-forcing via sorting.
  *
