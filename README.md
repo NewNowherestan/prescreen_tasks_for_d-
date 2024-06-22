@@ -12,7 +12,7 @@
 
 ## (Task 1) The two lists problem.
 
-The strategy pattern here is used to handle different scenarios for the K number. 
+The Tempplane method pattern here is used to handle different scenarios for the K number. 
 I do not recall if K elements should be subsequent or any, so implemented both.
 - `TwoListsWindow` is the strategy where the K number should be subsequent and is implemented using a sliding window approach.
 - `TwoListsAny` is the strategy where the K numbers can be any and is implemented by brute-forcing via sorting.
